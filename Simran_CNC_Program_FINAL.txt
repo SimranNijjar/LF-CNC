@@ -1,0 +1,79 @@
+ Program
+   Robot Program
+     MoveJ
+       HOME
+       Call Tool_OPEN
+     'TURN TOWARDS CONVEYOR'
+     MoveJ
+       Waypoint_1
+     'PICK UP RAW MATERIALS BIN'
+     MoveJ
+       Waypoint_2
+     MoveL
+       Waypoint_3
+       Waypoint_4
+       Waypoint_5
+     'PLACE RAW MATERIALS BIN'
+     MoveJ
+       'Waypoint_6'
+       Waypoint_7
+     MoveL
+       Waypoint_16
+       Waypoint_8
+       Waypoint_9
+       Waypoint_10
+       Waypoint_17
+       Waypoint_10
+       Waypoint_18
+     'PICK UP 1ST BLOCK'
+     MoveL
+       Waypoint_11
+       Waypoint_12
+       Waypoint_23
+       Wait: 0.5
+       Call Tool_CLOSE
+       Wait: 1.0
+       Waypoint_12
+       Waypoint_13
+     MoveJ
+       Waypoint_14
+       Waypoint_15
+       Wait: 0.5
+       Set door=On
+       Wait: 6.0
+     'PLACE 1st BLOCK IN CNC'
+     MoveJ
+       Waypoint_22
+     MoveL
+       'Waypoint_24'
+       Waypoint_20
+       Waypoint_21
+       Call Tool_OPEN
+       Wait: 1.0
+       Waypoint_25
+       Call Tool_CLOSE
+       Wait: 1.0
+       Waypoint_26
+       'Waypoint_27'
+       'Waypoint_26'
+       Waypoint_28
+       Waypoint_26
+       Waypoint_25
+       Waypoint_44
+       Waypoint_45
+       Waypoint_46
+       Waypoint_47
+       Waypoint_48
+       Waypoint_44
+       Waypoint_15
+       Wait: 0.5
+       Set door=Off
+       Wait: 6.0
+     'TOP TO BOTTOM'
+     'MoveL'
+   Tool_OPEN
+     Set tool_open=On
+     Set tool_close=Off
+   Tool_CLOSE
+     Set tool_open=Off
+     Set tool_close=On
